@@ -12,6 +12,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @movies.sort_by{|m| m[:title]}
   end
 
   def new
