@@ -1,14 +1,11 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
-  background: White;
   color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
-  font-size: 10pt;
 }
-div#main {
-  margin: 0;
-  padding: 0 20px 20px;
+.main {
+  font-size: 10pt;
 }
 a {
   background: transparent;
@@ -24,7 +21,7 @@ h1 {
   width: 100%;
   border-bottom: 1px solid DarkSlateGrey;
 }
-h1.title {
+title {
   margin: 0 0 1em;
   padding: 10px;
   background-color: orange;
@@ -33,22 +30,45 @@ h1.title {
   font-size: 2em;
   font-style: normal;
 }
-table#movies {
-  margin: 10px;
+.movies {
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
 }
-table#movies th {
-  border: 2px solid white;
-  font-weight: bold;
+.movies tr,
+.movies th,
+.movies td {
+  transition: background-color 250ms;
+}
+.movies tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.movies tr:nth-child(even):hover {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+.movies tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.movies tr:nth-child(odd):hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.movies thead {
   background-color: wheat;
 }
-table#movies th, table#movies td {
-  padding: 4px;
+.movies th,
+.movies td {
+  padding: 6px 12px;
   text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
-#notice #warning {
+.movies th:hover,
+.movies td:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.movies .hilite {
+  background-color: yellow;
+}
+.warning {
   background: rosybrown;
   margin: 1em 0;
   padding: 4px;
